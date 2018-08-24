@@ -1,5 +1,5 @@
 html {
-	background-image: url("png/background.jpg");
+	background-image: url(background.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -16,7 +16,6 @@ html {
 	right: 0;
 	background-color: #000000;
 	border-bottom: 1px solid #ffffff;
-	overflow: hidden;
 }
 
 .main {
@@ -25,7 +24,13 @@ html {
 	border: 1px solid #000000;
 	border-radius: 5px;
 	margin-top: 150px;
-	padding: 20px;
+	padding: 50px;
+}
+
+.m_logo {
+	width: 35px;
+	height: 35px;
+	float: left;
 }
 
 .logo {
@@ -40,6 +45,20 @@ html {
 	float: left;
 }
 
+.header h3 {
+	color: #ffffff;
+	float: left;
+	margin: 7px 0 0 5px;
+}
+
 a {
 	text-decoration: none;
+}
+
+.header #m_user, #m_login {
+	height: 30px;
+	width: 30px;
+	float: right;
+	margin-top: 3px;
+	margin-right: 2px;
 }

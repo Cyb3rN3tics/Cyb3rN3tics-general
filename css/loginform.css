@@ -1,0 +1,19 @@
+form.loginbox{
+    border: 3px #ffffff;
+}
+.panel{
+    background-color: black;
+}
+
+body {
+    background: url("../png/logo.jpg") no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-position:center;
+    vertical-align: 400px;
+    background-color: black;
+}
+@media (min-width:768px){
+    .login{
+        margin-top:170px;
+    }
+}
