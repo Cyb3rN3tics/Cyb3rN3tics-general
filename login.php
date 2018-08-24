@@ -3,9 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/loginform.css">
     </head>
+    
     <div class="container">
+    <div class="row login block-lg">
+    <div class="col-md-4 col-md-offset-4">    
+    <div class="panel panel-default">
+        <div class="panel-body">
     <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -20,16 +26,14 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-</div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
+</div>
+</div>
+</div>
+</div>
 </html>
-
-
-
-
-
-
 
 
 
