@@ -1,3 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <div class="container">
+    <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</html>
+
+
+
+
+
+
+
+
+
 <?php
 session_start();
 if (isset($_SESSION["is_logged"])){
@@ -27,28 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($conn);
     exit();
 }
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Commpatible" content="IE=edge, chrome=1">
-        <title>Login</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <div id="container">
-            <span style="color: #ff0000;"></span>
-            <form action="login.php" method="post">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-                <p><a href="#">Forgot your password?</a></p>
-                <input type="password" id="password" name="password" required>
-                <input type="submit" value="Login">
-            </form>
-        </div>
-    </body>
-</html>
+
+
+
