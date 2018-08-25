@@ -35,17 +35,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Commpatible" content="IE=edge, chrome=1">
         <title>Login</title>
-        <link rel="stylesheet" href="static.css">
+        <link rel="stylesheet" href="css/static.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <div class="header">
 			<a href="home.php">
-				<img src="logo.jpg" class="logo">
+				<img src="img/logo.jpg" class="logo">
 				<h1>CyberNetics&trade;</h1>
 			</a>
             <a href="login.php">
-				<img src="login.png" style="height: 40px; width: 40px; margin: 7px 5px 0 5px; float: right;">
+				<img src="img/login.png" style="height: 40px; width: 40px; margin: 7px 5px 0 5px; float: right;">
 			</a>
         </div>
         <center>
