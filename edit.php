@@ -37,7 +37,7 @@ if (!isset($_SESSION["is_admin"]) || $_SESSION["is_admin"]){
 		</a>
 		<?php } else { ?>
 		<div class="header">
-			<a href="home.php" title="CyberNetics&trade; | Home">
+			<a href="home.php" title="CyberNetics&trade; | Edit">
 				<img class="logo" src="img/logo.png">
 				<h1>CyberNetics&trade;</h1>
 			</a>
