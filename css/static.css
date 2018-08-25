@@ -12,7 +12,6 @@ html {
 .header {
 	background-color: rgba(0, 0, 0, 45%);
 	position: fixed;
-	height: 55px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -24,8 +23,9 @@ html {
 	background-color: #ffffff;
 	border: 1px solid #000000;
 	border-radius: 5px;
-	margin-top: 150px;
+	margin: 150px auto;
 	padding: 50px;
+	text-align: center;
 }
 
 #m_logo {
@@ -41,20 +41,21 @@ html {
 }
 
 .header h1 {
-	margin: 7px 0 0 10px;
+	margin: 7px 10px 0 10px;
 	float: left;
 }
 
 .header h3 {
-	color: #ffffff;
 	float: left;
-	margin: 7px 0 0 5px;
+	margin: 7px 7px 0 5px;
 }
 
 .div1 {
 	color: #ffffff;
 	position: absolute;
 	cursor: pointer;
+	top: 0;
+	bottom: 0;
 }
 
 .div2 {
