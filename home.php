@@ -24,17 +24,16 @@ if (!isset($_SESSION["is_phone"])){
 	</head>
 	<body>
 		<?php if ($_SESSION["is_phone"]){ ?>
-		<div class="header">
-			<div>
-				<a href="">
-					<img src="img/logo.png" class="m_logo">
-					<h3>CyberNetics&trade;</h3>
-				</a>
+		<div class="header" style="height: 35px;">
+			<div class="div1" onmouseover="over('img/logo.jpg', 'm_logo');" onmouseout="out('img/logo.png', 'm_logo');">
+				<img id="m_logo" src="img/logo.png">
+				<h3>CyberNetics&trade;</h3>
 			</div>
 		<?php if (isset($_SESSION["is_logged"])){ ?>
-			<img id="m_user" src="user.png">
-		<?php } else { ?>
-		<?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"]){ ?>
+			<div class="div2" onmouseover="over('img/o_user.png', 'm_user');" onmouseout="out('img/user.png', 'm_user');">
+				<img id="m_user" src="user.png">
+			</div>
+		<?php } else { if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"]){ ?>
 			<a href="edit.php">
 				<img class="m_img" src="img/edit.png">
 			</a>
@@ -44,18 +43,16 @@ if (!isset($_SESSION["is_phone"])){
 			</a>
 		<?php } ?>
 		</div>
-		<center>
-			<div style="margin-top: 100px; background-color: #ffffff; border: 1px solid #000000; border-radius: 5px;">
-				<h3>Welcome to CyberNetics&trade; official website</h3>
-			</div>
-		</center>
+		<div style="margin: 100px auto; background-color: #ffffff; border: 1px solid #000000; border-radius: 5px; text-align: center;">
+			<h3>Welcome to CyberNetics&trade; official website</h3>
+		</div>
 		<?php if (isset($_SESSION["is_logged"])){ ?>
 		<a href="logout.php">
 			<img src="img/logout.png" style="position: fixed; bottom: 5px; right: 5px; background-color: #000000; border: 1px solid #ffffff; border-radius: 100%; height: 30px; width: 30px; padding: 3px;">
 		</a>
 		<?php }} else { ?>
 		<div class="header">
-			<div class="div1" onmouseover="over('img/o_logo.png', 'logo');" onmouseout="out('img/logo.png', 'logo');">
+			<div class="div1" onmouseover="over('img/logo.jpg', 'logo');" onmouseout="out('img/logo.png', 'logo');">
 				<img id="logo" src="img/logo.png">
 				<h1>CyberNetics&trade;</h1>
 			</div>
@@ -73,11 +70,9 @@ if (!isset($_SESSION["is_phone"])){
 			</div>
 		<?php } ?>
 		</div>
-		<center>
-			<div class="main">
-				<h2 style="cursor: default;">Welcome to CyberNetics&trade; official website</h2>
-			</div>
-		</center>
+		<div class="main">
+			<h2 style="cursor: default;">Welcome to CyberNetics&trade; official website</h2>
+		</div>
 		<?php if (isset($_SESSION["is_logged"])){ ?>
 		<a href="logout.php">
 			<img src="img/logout.png" title="Logout" style="position: fixed; bottom: 10px; right: 10px; background-color: #000000; border: 1px solid #ffffff; border-radius: 100%; height: 40px; width: 40px; padding: 3px;">
