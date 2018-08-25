@@ -10,12 +10,13 @@ html {
 }
 
 .header {
+	background-color: rgba(0, 0, 0, 45%);
 	position: fixed;
+	height: 55px;
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: #000000;
-	border-bottom: 1px solid #ffffff;
+	box-shadow: 0 0 10px #ffffff;
 }
 
 .main {
@@ -27,20 +28,19 @@ html {
 	padding: 50px;
 }
 
-.m_logo {
+#m_logo {
 	width: 35px;
 	height: 35px;
 	float: left;
 }
 
-.logo {
+#logo {
 	height: 55px;
 	width: 60px;
 	float: left;
 }
 
 .header h1 {
-	color: #ffffff;
 	margin: 7px 0 0 10px;
 	float: left;
 }
@@ -51,11 +51,26 @@ html {
 	margin: 7px 0 0 5px;
 }
 
-a {
-	text-decoration: none;
+.div1 {
+	color: #ffffff;
+	position: absolute;
+	cursor: pointer;
 }
 
-.header #m_user, #m_login {
+.div2 {
+	cursor: pointer;
+	height: 55px;
+	float: right;
+}
+
+.div1:hover, .div2:hover {
+	background-color: #ffffff;
+	color: #000000;
+	-webkit-transition: color 0.3s;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.header #m_user, .m_img {
 	height: 30px;
 	width: 30px;
 	float: right;
