@@ -4,12 +4,13 @@ html {
 	background-attachment: fixed;
 	background-size: cover;
 	font-family: sans-serif;
-	background-color: #000000;
+	background-color: #ffffff;
 	height: 100%;
 	width: 100%;
 }
 
 .header {
+	height: 55px;
 	background-color: rgba(0, 0, 0, 45%);
 	position: fixed;
 	top: 0;
@@ -18,20 +19,25 @@ html {
 	box-shadow: 0 0 10px #ffffff;
 }
 
+.header:hover {
+	background-color: #000000;
+	transition: background-color 0.3s ease-in-out;
+}
+
 .main {
 	width: 700px;
+	margin: 150px auto 50px auto;
+	padding: 50px;
 	background-color: #ffffff;
 	border: 1px solid #000000;
 	border-radius: 5px;
-	margin: 150px auto;
-	padding: 50px;
 	text-align: center;
 }
 
-#m_logo {
-	width: 35px;
-	height: 35px;
-	float: left;
+.main span {
+	cursor: default;
+	font-size: 25px;
+	font-weight: bold;
 }
 
 #logo {
@@ -40,28 +46,24 @@ html {
 	float: left;
 }
 
-.header h1 {
-	margin: 7px 10px 0 10px;
+.header span {
+	font-weight: bold;
+	font-size: 30px;
+	margin: 9px 10px 0 10px;
 	float: left;
-}
-
-.header h3 {
-	float: left;
-	margin: 7px 7px 0 5px;
 }
 
 .div1 {
+	float: left;
 	color: #ffffff;
-	position: absolute;
 	cursor: pointer;
-	top: 0;
-	bottom: 0;
+	height: 100%;
 }
 
 .div2 {
 	cursor: pointer;
-	height: 55px;
 	float: right;
+	height: 100%;
 }
 
 .div1:hover, .div2:hover {
@@ -71,10 +73,35 @@ html {
 	transition: background-color 0.3s ease-in-out;
 }
 
-.header #m_user, .m_img {
-	height: 30px;
-	width: 30px;
+#user {
+	height: 40px;
+	width: 40px;
 	float: right;
-	margin-top: 3px;
-	margin-right: 2px;
+	margin: 7px 5px 0 5px;
+}
+
+#edit {
+	height: 40px;
+	width: 40px;
+	margin: 7px 5px 0 5px;
+	float: right;
+}
+
+#login {
+	height: 40px;
+	width: 40px;
+	margin: 7px 5px 0 5px;
+	float: right;
+}
+
+.logout {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	background-color: #000000;
+	border: 1px solid #ffffff;
+	border-radius: 100%;
+	height: 40px;
+	width: 40px;
+	padding: 3px;
 }
