@@ -15,9 +15,9 @@ function clean($data){
 	return htmlspecialchars(stripslashes(trim($data)));
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $conn = mysqli_connect("127.0.0.1", "root", "3E9gPzv9TyhyQdBa", "users") or die("Conenction failed");
+    $conn = mysqli_connect("localhost", "cybernetics", "sTuKotES&ichEH9DO0eb", "users") or die("Conenction failed");
     $username = clean($_POST["username"]);
-    $password = hash("sha256", clean($_POST["password"]));
+    $password = strtoupper(hash("sha256", clean($_POST["password"])));
     $sql = "SELECT * FROM info WHERE (uname='$username' AND password='$password')";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 1){
