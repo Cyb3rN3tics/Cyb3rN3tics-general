@@ -4,9 +4,13 @@ html {
 	background-attachment: fixed;
 	background-size: cover;
 	font-family: sans-serif;
-	background-color: #ffffff;
+	background-color: #000000;
 	height: 100%;
 	width: 100%;
+}
+
+span {
+	cursor: default;
 }
 
 .header {
@@ -34,7 +38,7 @@ html {
 	text-align: center;
 }
 
-.main span {
+.home {
 	cursor: default;
 	font-size: 25px;
 	font-weight: bold;
@@ -47,6 +51,7 @@ html {
 }
 
 .header span {
+	cursor: pointer;
 	font-weight: bold;
 	font-size: 30px;
 	margin: 9px 10px 0 10px;
