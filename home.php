@@ -6,6 +6,15 @@ if (!isset($_SESSION["is_phone"])){
 	header("Location: /");
 	exit();
 }
+if (isset($_SESSION["username"])){
+	$info = json_decode(file_get_contents("status.json"), true);
+	$is_member = (bool)$info[$_SESSION["username"]]["is_member"];
+	if (!$is_member){
+		header("Location: logout.php");
+		exit();
+	}
+	$is_admin = (bool)$info[$_SESSION["username"]]["is_admin"];
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +22,6 @@ if (!isset($_SESSION["is_phone"])){
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>CyberNetics&trade; | Home</title>
-	<!-- load styles depending on the type of the device to reduce the code -->
 	<?php if ($_SESSION["is_phone"]){ ?>
 		<link rel="stylesheet" type="text/css" href="css/m_static.css">
 	<?php } else { ?>
@@ -28,11 +36,11 @@ if (!isset($_SESSION["is_phone"])){
 				<img id="logo" src="img/logo.png">
 				<span>CyberNetics&trade;</span>
 			</div>
-		<?php if (isset($_SESSION["is_logged"])){ ?>
+		<?php if ($_SESSION["is_logged"]){ ?>
 			<div class="div2" onclick="(function(){window.location = 'dashboard.php';})()" onmouseover="over('img/o_user.png', 'user');" onmouseout="out('img/user.png', 'user');">
 				<img id="user" src="img/user.png" title="<?php echo $_SESSION["username"]; ?>">
 			</div>
-		<?php if ($_SESSION["is_admin"]){ ?>
+		<?php if ($is_admin){ ?>
 			<div class="div2" onclick="(function(){window.location = 'edit.php';})()" onmouseover="over('img/o_edit.png', 'edit');" onmouseout="out('img/edit.png', 'edit');">
 				<img id="edit" src="img/edit.png" title="CyberNetics&trade; | Edit">
 			</div>
@@ -43,9 +51,9 @@ if (!isset($_SESSION["is_phone"])){
 		<?php } ?>
 		</div>
 		<div class="main">
-			<span>Welcome to CyberNetics&trade; official website</span>
+			<span class="home">Welcome to CyberNetics&trade; official website</span>
 		</div>
-	<?php if (isset($_SESSION["is_logged"])){ ?>
+	<?php if ($_SESSION["is_logged"]){ ?>
 		<a href="logout.php">
 			<img class="logout" src="img/logout.png" title="CyberNetics&trade; | Logout">
 		</a>

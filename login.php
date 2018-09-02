@@ -8,8 +8,8 @@ if (!isset($_SESSION["is_phone"])){
 	exit();
 }
 if (isset($_SESSION["is_logged"])){
-    header("Location: dashboard.php");
-    exit();
+	header("Location: dashboard.php");
+	exit();
 }
 function clean($data){
 	return htmlspecialchars(stripslashes(trim($data)));
@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (mysqli_num_rows($result) == 1){
         $_SESSION["is_logged"] = true;
         $_SESSION["username"] = $username;
-		$_SESSION["is_admin"] = mysqli_fetch_assoc($result)["is_admin"];
         header("Location: dashboard.php");
 		exit();
     } else {
