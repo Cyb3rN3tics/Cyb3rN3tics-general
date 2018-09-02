@@ -8,22 +8,21 @@ if (!isset($_SESSION["is_phone"])){
 	exit();
 }
 if (isset($_SESSION["is_logged"])){
-    header("Location: dashboard.php");
-    exit();
+	header("Location: dashboard.php");
+	exit();
 }
 function clean($data){
 	return htmlspecialchars(stripslashes(trim($data)));
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $conn = mysqli_connect("127.0.0.1", "root", "3E9gPzv9TyhyQdBa", "users") or die("Conenction failed");
+    $conn = mysqli_connect("localhost", "cybernetics", "sTuKotES&ichEH9DO0eb", "users") or die("Conenction failed");
     $username = clean($_POST["username"]);
-    $password = hash("sha256", clean($_POST["password"]));
+    $password = strtoupper(hash("sha256", clean($_POST["password"])));
     $sql = "SELECT * FROM info WHERE (uname='$username' AND password='$password')";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 1){
         $_SESSION["is_logged"] = true;
         $_SESSION["username"] = $username;
-		$_SESSION["is_admin"] = mysqli_fetch_assoc($result)["is_admin"];
         header("Location: dashboard.php");
 		exit();
     } else {
